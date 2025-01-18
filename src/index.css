@@ -122,3 +122,7 @@ body {
 .text-field::placeholder {
   @apply text-zinc-400;
 }
+
+.reveal-up {
+  @apply opacity-0 translate-y-20;
+}
