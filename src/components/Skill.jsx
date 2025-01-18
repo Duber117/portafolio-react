@@ -3,9 +3,9 @@ import SkillCard from "./SkillCard";
 
 const skillItem = [
     {
-      imgSrc: '/images/figma.svg',
-      label: 'Figma',
-      desc: 'Design tool'
+      imgSrc: '/images/laravel-2.svg',
+      label: 'Laravel',
+      desc: 'Framework'
     },
     {
       imgSrc: '/images/css3.svg',
@@ -23,14 +23,14 @@ const skillItem = [
       desc: 'Web Server'
     },
     {
-      imgSrc: '/images/expressjs.svg',
-      label: 'ExpressJS',
+      imgSrc: '/images/livewire.svg',
+      label: 'Livewire',
       desc: 'Node Framework'
     },
     {
-      imgSrc: '/images/mongodb.svg',
-      label: 'MongoDB',
-      desc: 'Database'
+      imgSrc: '/images/tailwindcss.svg',
+      label: 'TailwindCSS',
+      desc: 'User Interface'
     },
     {
       imgSrc: '/images/react.svg',
@@ -38,9 +38,9 @@ const skillItem = [
       desc: 'Framework'
     },
     {
-      imgSrc: '/images/tailwindcss.svg',
-      label: 'TailwindCSS',
-      desc: 'User Interface'
+      imgSrc: '/images/postgresql.svg',
+      label: 'PostgreSQL',
+      desc: 'Database'
     },
   ];
 
