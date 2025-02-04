@@ -13,7 +13,7 @@ const Header = () => {
             <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid-cols-[1fr,3fr,1fr]">
                 <h1>
                     <a href="/" className="logo">
-                        <img src="/images/logo.svg" width={40} height={40} alt="Dxp117" />
+                        <img src="/images/Logo.png" width={70} height={70} alt="Dxp117" />
                     </a>
                 </h1>
                 <div className="relative md:justify-self-center">
