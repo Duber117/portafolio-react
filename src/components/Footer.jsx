@@ -18,10 +18,10 @@ const sitemap = [
       label: 'Work',
       href: '#work'
     },
-    {
-      label: 'Reviews',
-      href: '#reviews'
-    },
+    // {
+    //   label: 'Reviews',
+    //   href: '#reviews'
+    // },
     {
       label: 'Contact me',
       href: '#contact'
@@ -31,24 +31,16 @@ const sitemap = [
   const socials = [
     {
       label: 'GitHub',
-      href: 'https://www.github.com/codewithsadee-org'
+      href: 'https://github.com/Duber117'
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/codewithsadee'
-    },
-    {
-      label: 'Twitter X',
-      href: 'https://x.com/codewithsadee_'
+      href: 'https://www.linkedin.com/in/jhonnier-duberly-parada-valderrama-4248b4237/'
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/codewithsadee'
+      href: 'https://www.instagram.com/dub._.117/'
     },
-    {
-      label: 'CodePen',
-      href: 'https://codepen.io/codewithsadee'
-    }
   ];
 
 const Footer = () => {

@@ -22,9 +22,15 @@ const Header = () => {
                     </button>
                     <Navbar navOpen={navOpen} />
                 </div>
-                <a href="#contact" className="btn btn-secondary max-md:hidden md:jusstify-self-end">
+                {/* <a href="#contact" className="btn btn-secondary max-md:hidden md:jusstify-self-end">
                     Contactame
-                </a>
+                </a> */}
+                <select id="countries" className="btn btn-secondary max-md:hidden md:jusstify-self-end">
+                    <option value="ES">Spanish</option>
+                    <option value="US">United States</option>
+                </select>
+                
+
             </div>
         </header>
     );
