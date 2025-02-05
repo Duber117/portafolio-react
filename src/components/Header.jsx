@@ -6,7 +6,13 @@
 import Navbar from "./Navbar";
 import { useState } from "react";
 
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+    const { t, i18n } = useTranslation(["welcome"]);
+    const changeLanguage = () => {
+      i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
+    };
     const [navOpen, setNavOpen] = useState(false);
     return (
         <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
@@ -22,15 +28,7 @@ const Header = () => {
                     </button>
                     <Navbar navOpen={navOpen} />
                 </div>
-                {/* <a href="#contact" className="btn btn-secondary max-md:hidden md:jusstify-self-end">
-                    Contactame
-                </a> */}
-                <select id="countries" className="btn btn-secondary max-md:hidden md:jusstify-self-end">
-                    <option value="ES">Spanish</option>
-                    <option value="US">United States</option>
-                </select>
-                
-
+                <button onClick={changeLanguage}className="btn btn-secondary max-md:hidden md:jusstify-self-end">{t('Change Language')}</button>
             </div>
         </header>
     );

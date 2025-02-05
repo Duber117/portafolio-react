@@ -5,8 +5,10 @@
 
 import React from "react";
 import { ButtonPrimary, ButtonOutline  } from "./Button";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+    const { t } = useTranslation(["welcome"]);
     return (
         <section id="home" className="pt-28 lg:pt-36">
             <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-10">
@@ -19,17 +21,17 @@ const Hero = () => {
                             <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                             </span>
-                            Available for work
+                            {t("Available for work")}
                         </div>
                     </div>
-                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">Building Scalable Modern Websites for the Future</h2>
+                    <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">{t("Building Scalable Modern Websites for the Future")}</h2>
                     <div className="flex items-center gap-3">
                         <ButtonPrimary 
-                        label="Download CV"
+                        label={t("Download CV")}
                         icon="download" />
                         <ButtonOutline 
                         href="#about"
-                        label="Scroll down"
+                        label={t("Scroll down")}
                         icon="arrow_downward"
                         />
                     </div>

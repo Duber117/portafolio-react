@@ -11,6 +11,7 @@ import { ReactLenis, useLenis } from 'lenis/react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
+import { Suspense } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -34,18 +35,20 @@ function App() {
     });
   });
   return (
-    <ReactLenis root>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skill />
-        <Work />
-        {/* <Review /> */}
-        <Contact />
-      </main>
-      <Footer />
-    </ReactLenis>
+    <Suspense fallback="loading">
+      <ReactLenis root>
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skill />
+          <Work />
+          {/* <Review /> */}
+          <Contact />
+        </main>
+        <Footer />
+      </ReactLenis>
+    </Suspense>
   );
 }
 

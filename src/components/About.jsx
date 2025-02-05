@@ -2,28 +2,27 @@
  * @copyright 2025 <>
  * @license Apache-2.0
  */
-
-const aboutItems = [
-    {
-      label: 'Project done',
-      number: 45
-    },
-    {
-      label: 'Years of experience',
-      number: 10
-    }
-  ];
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+    const { t } = useTranslation(["welcome"]);
+    
+    const aboutItems = [
+        {
+          label: t("Project done"),
+          number: 5
+        },
+        {
+          label: t('Years of experience'),
+          number: 2
+        }
+      ];
     return (
         <section id="about" className="section">
             <div className="container">
                 <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                     <p className="text-zinx-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                        Welcome! I&apos;m Henry, a professional web developer with a knack for crafting 
-                        visually stunning and highly functional websites. Combining creativity and technical
-                        expertise, I transform your vision into digital masterpiece that excels in both appearance
-                        and performance.
+                        {t("Welcome. I'm Duber, a web developer with a great ability to work in a team and create highly functional and aesthetic websites. Although I have little experience, my creativity, commitment and desire to learn drive me to constantly improve in every project I undertake.")}
                     </p>
                     <div className="flex flex-weap items-center gap-4 md:gap-7">
                         {
@@ -37,7 +36,6 @@ const About = () => {
                                 </div>
                             ))
                         }
-
                         <img src="/images/Logo.png" alt="Logo" className="ml-auto md:w-[100px] md:h-[100px]" width={100} height={100} />
                     </div>
                 </div>
@@ -45,5 +43,4 @@ const About = () => {
         </section>
     );
 }
-
 export default About;

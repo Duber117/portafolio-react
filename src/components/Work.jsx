@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 const works = [
     {
@@ -10,13 +11,13 @@ const works = [
   ];
 
 const Work = () => {
+    const { t } = useTranslation(["welcome"]);
     return (
         <section className="" id="work">
             <div className="container">
                <h2 className="headline-2 mb-8 reveal-up">
-                Mi portafoplio de proyectos
+                {t("My project portfolio")}
                </h2>
-
                <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,minmax(280px,_1fr))]">
                 {works.map(({imgSrc, title, tags, projectLink}, key)=>(
                     <ProjectCard key={key} imgSrc={imgSrc} title={title} tags={tags} projectLink={projectLink} classes="reveal-up" />
@@ -26,5 +27,4 @@ const Work = () => {
         </section>
     );
     }
-
 export default Work;

@@ -1,5 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
+import { useTranslation } from "react-i18next";
 
 const skillItem = [
     {
@@ -25,7 +26,7 @@ const skillItem = [
     {
       imgSrc: '/images/livewire.svg',
       label: 'Livewire',
-      desc: 'Node Framework'
+      desc: 'Framework'
     },
     {
       imgSrc: '/images/tailwindcss.svg',
@@ -45,11 +46,12 @@ const skillItem = [
   ];
 
 const Skill = () => {
+      const { t } = useTranslation(["welcome"]);
   return (
 <section className="section">
     <div className="container">
-        <h2 className="headline-2 reveal-up">Essential Tools use</h2>
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">Discover the powerful tools and technologies I use to create exceptional, high-performing websites & applications.</p>
+        <h2 className="headline-2 reveal-up">{t("Tools used")}</h2>
+        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">{t("Discover the powerful tools and technologies I use to create exceptional, high-performing websites & applications.")}</p>
 
         <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
             {
