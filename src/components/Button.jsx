@@ -4,9 +4,8 @@
  */
 
 import PropTypes from "prop-types";
-
 const ButtonPrimary = ({
-    href,
+    href = '/docs/curriculum.pdf',
     target = '_self',
     label,
     icon,
@@ -14,7 +13,7 @@ const ButtonPrimary = ({
 }) => {
     if (href) {
         return (
-            <a href={href} target={target} className={"btn btn-primary " + classes}>
+            <a href={href} target={target} className={"btn btn-primary " + classes} download>
                 {label}
                 {icon ? 
                 <span className="material-symbols-rounded" aria-hidden="true" >
